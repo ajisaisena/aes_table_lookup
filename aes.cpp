@@ -580,17 +580,7 @@ static const u32 rcon[] = {
         0x1B000000, 0x36000000,
 };
 
-//u32 byte_unite(u8 b0, u8 b1, u8 b2, u8 b3) {
-//    //将四个拼接在一起
-//    u32 block = b0;
-//    block = (block << 8);
-//    block += b1;
-//    block = (block << 8);
-//    block += b2;
-//    block = (block << 8);
-//    block += b3;
-//    return block;
-//}
+
 void input_format_128(const char* in, u8* out) {
     //
     for (int i = 0; i < 16; i++) {
@@ -608,13 +598,6 @@ void output_format_128(const u8* in, char* out) {
     }
 }
 
-//void state_unite(u8 *out, u32 in) {
-//    //输出的格式化
-//    out[0] = (u8) ((in) >> 24);
-//    out[1] = (u8) ((in) >> 16);
-//    out[2] = (u8) ((in) >> 8);
-//    out[3] = (u8) (in);
-//}
 
 void generate_key(const u8* passwd, u32* keys) {
     //密钥拓展
